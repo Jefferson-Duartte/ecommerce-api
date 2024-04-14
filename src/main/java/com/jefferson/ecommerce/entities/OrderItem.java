@@ -77,5 +77,8 @@ public class OrderItem {
 		return Objects.equals(id, other.id);
 	}
 	
-
+	public Double getSubTotal() {
+		return this.quantity * this.price;
+	}
+	
 }
