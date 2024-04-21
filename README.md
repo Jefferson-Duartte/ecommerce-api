@@ -69,10 +69,7 @@ Um dos principais aprendizados foi aprofundar meu conhecimento sobre o Spring Bo
 | `id`      | `string` | **Obrigatório**.Os dados do usuário no body da requisição em formato de JSON |
 
 ---
----
----
----
----
+
 
 #### Retorna todos os produtos
 
@@ -97,10 +94,7 @@ Um dos principais aprendizados foi aprofundar meu conhecimento sobre o Spring Bo
 
 
 ---
----
----
----
----
+
 
 
 #### Retorna todos os pedidos
@@ -125,10 +119,7 @@ Um dos principais aprendizados foi aprofundar meu conhecimento sobre o Spring Bo
 | `id`      | `string` | **Obrigatório**. O ID do pedido que você quer |
 
 ---
----
----
----
----
+
 
 #### Retorna todas as categorias
 
