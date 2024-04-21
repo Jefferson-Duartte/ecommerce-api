@@ -12,50 +12,56 @@ import com.jefferson.ecommerce.repositories.UserRepository;
 import com.jefferson.ecommerce.services.exceptions.DatabaseException;
 import com.jefferson.ecommerce.services.exceptions.ResourceNotFoundException;
 
+import jakarta.persistence.EntityNotFoundException;
+
 @Service
 public class UserService {
-	
+
 	@Autowired
 	private UserRepository repository;
-	
-	
-	public List<User> findAll()	{
+
+	public List<User> findAll() {
 		return repository.findAll();
 	}
-	
+
 	public User findById(Long id) {
 		Optional<User> obj = repository.findById(id);
-		
+
 		return obj.orElseThrow(() -> new ResourceNotFoundException(id));
 	}
 
-	public User insert(User user){
+	public User insert(User user) {
 		return repository.save(user);
 	}
 
 	public void delete(Long id) {
 		try {
-	        if (repository.existsById(id)) {
-	            repository.deleteById(id);			
-	        } else {				
-	            throw new ResourceNotFoundException(id);			
-	        }		
-	    } catch (DataIntegrityViolationException e) {			
-	        throw new DatabaseException(e.getMessage());		
-	    }	
+			if (repository.existsById(id)) {
+				repository.deleteById(id);
+			} else {
+				throw new ResourceNotFoundException(id);
+			}
+		} catch (DataIntegrityViolationException e) {
+			throw new DatabaseException(e.getMessage());
+		}
 	}
-	
+
 	public User update(Long id, User user) {
-		User entity = repository.getReferenceById(id);
-		updateData(entity, user);
-		return repository.save(entity);
+
+		try {
+			User entity = repository.getReferenceById(id);
+			updateData(entity, user);
+			return repository.save(entity);
+		} catch (EntityNotFoundException e) {
+			throw new ResourceNotFoundException(id);
+		}
 	}
 
 	private void updateData(User entity, User user) {
 		entity.setName(user.getName());
 		entity.setEmail(user.getEmail());
 		entity.setPhone(user.getPhone());
- 	
+
 	}
 
 }
