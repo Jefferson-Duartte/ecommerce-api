@@ -142,6 +142,8 @@ Um dos principais aprendizados foi aprofundar meu conhecimento sobre o Spring Bo
 | :---------- | :--------- | :------------------------------------------ |
 | `id`      | `string` | **Obrigatório**. O ID da categoria que você quer |
 
+---
+
 ## 📦️ Como baixar o projeto
 
 Para copiar o projeto, utilize os comandos:
