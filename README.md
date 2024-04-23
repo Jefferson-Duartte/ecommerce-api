@@ -1,5 +1,5 @@
 
-# 🚀 Back-end Ecommerce API básica
+# 🚀 Back-end Ecommerce API 
 
 
 
@@ -7,7 +7,7 @@ Este projeto foi desenvolvido com o objetivo de aprofundar os conhecimentos em d
 
 ## 🧠 Aprendizados
 
-Um dos principais aprendizados foi aprofundar meu conhecimento sobre o Spring Boot e Spring Data JPA, compreendendo melhor como esses frameworks facilitam o desenvolvimento de aplicativos Java, especialmente no contexto de APIs RESTful e persistência de dados.
+Um dos principais aprendizados foi aprofundar meu conhecimento sobre o Spring Boot e Spring Data JPA, compreendendo melhor como esses frameworks facilitam o desenvolvimento de aplicativos Java, especialmente no contexto de APIs REST e persistência de dados.
 
 
 ## 🧑‍💻 Stack utilizada
